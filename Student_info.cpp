@@ -17,7 +17,8 @@ istream& read (istream& is, Student_info& s)
 	is >> s.name >> midterm >> final;
 	vector<double> homework;
 	read_hw (is, homework); // read and store all the student's homework grades
-	s.subject_grade = grade (midterm, final, homework);
+	//s.subject_grade = grade (midterm, final, homework);
+	if (is) s.subject_grade = grade (midterm, final, homework);
 	return is;
 }
 

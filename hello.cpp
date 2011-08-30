@@ -64,22 +64,22 @@ int main()
 	// alphabetise the student records
 	sort (students.begin(), students.end(), compare);
 
-	//// write the names and grades
-	//for (vector<Student_info>::size_type i = 0; i != students.size(); i++) {
-	//	// write the name padded on the right to maxlen + 1 characters
-	//	cout << students[i].name
-	//		 << string (maxlen + 1 - students[i].name.size(), ' ');
+	// write the names and grades
+	for (vector<Student_info>::size_type i = 0; i != students.size(); i++) {
+		// write the name padded on the right to maxlen + 1 characters
+		cout << students[i].name
+			 << string (maxlen + 1 - students[i].name.size(), ' ');
 
-	//	//// compute and write the grade
-	//	//try {
-	//	//	double final_grade = grade (students[i]);
-	//		streamsize prec = cout.precision();
-	//		cout << setprecision(3) << students[i].subject_grade << setprecision(prec);
-	//	//} catch (domain_error e) {
-	//	//	cout << e.what();
-	//	//}
-	//	cout << endl;
-	//}
+		//// compute and write the grade
+		//try {
+		//	double final_grade = grade (students[i]);
+			streamsize prec = cout.precision();
+			cout << setprecision(3) << students[i].subject_grade << setprecision(prec);
+		//} catch (domain_error e) {
+		//	cout << e.what();
+		//}
+		cout << endl;
+	}
 
 
 	return 0;
