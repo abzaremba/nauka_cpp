@@ -52,7 +52,7 @@ vector<string> use_strings(istream& an_istream)
 	str_numbers = count_strings (str_vec);
 	cout << endl;
 	for (vector<int>::size_type i=0; i != str_numbers.size(); ++i)
-		cout << i << " ";
+		cout << i << " " << str_numbers[i] << endl;
 
 
 	return str_vec;
