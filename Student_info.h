@@ -8,8 +8,7 @@
 
 struct Student_info {
 	std::string name;
-	double midterm, final;
-	std::vector<double> homework;
+	double subject_grade;
 };
 
 bool compare(const Student_info&, const Student_info&);

@@ -26,18 +26,14 @@ using std::vector;
 
 int main()
 {
-	// asks and reads a vector
-	cout << "Enter your numbers: ";
-	vector<double> vec;
-	double current_elem;
-	while (cin >> current_elem)
-		vec.push_back(current_elem);
+	//// asks and reads a vector
+	//cout << "Enter your numbers: ";
+	//vector<double> vec;
+	//double current_elem;
+	//while (cin >> current_elem)
+	//	vec.push_back(current_elem);
 
-	cout << endl << "Average of the vector you've entered is: " << vec_average (vec) << endl;
-
-
-
-
+	//cout << endl << "Average of the vector you've entered is: " << vec_average (vec) << endl;
 
 
 	//// ask for lots of words
@@ -51,56 +47,37 @@ int main()
 
 	 
 
-
-
-			//string word;
-			//vector<string> words;
-
-			//while (cin >> word)
-			//	words.push_back(word);
-			//
-			//vector<string> reorganise (const vector<string>& wds)
-			//{sort (wds.begin(), wds.end(), compare);
-			//}
-
-			//int numberlength;
-			//numberlength = 2 * ceil ( log10 (maxnumber) );
-
-			//for (int i=0; i != maxnumber; ++i){
-			//	cout << std::setw(numberlength) << i << " " << i*i << endl;
-			//}
-
 	
-	//vector<Student_info> students;
-	//Student_info record;
-	//string::size_type maxlen = 0;	// the length of the longest name
+	vector<Student_info> students;
+	Student_info record;
+	string::size_type maxlen = 0;	// the length of the longest name
 
-	//// read and store all the student's data
-	//// invariant: students contains all the student records read so far
-	////			  maxlen contains the length of the longest name in the students
-	//while (read(cin, record)) {
-	//	// find length of the longest name
-	//	maxlen = max (maxlen, record.name.size());
-	//	students.push_back(record);
-	//}
-	//
-	//// alphabetise the student records
-	//sort (students.begin(), students.end(), compare);
+	// read and store all the student's data
+	// invariant: students contains all the student records read so far
+	//			  maxlen contains the length of the longest name in the students
+	while (read(cin, record)) {
+		// find length of the longest name
+		maxlen = max (maxlen, record.name.size());
+		students.push_back(record);
+	}
+	
+	// alphabetise the student records
+	sort (students.begin(), students.end(), compare);
 
 	//// write the names and grades
 	//for (vector<Student_info>::size_type i = 0; i != students.size(); i++) {
-	//	// write the name padden on the right to maxlen + 1 characters
+	//	// write the name padded on the right to maxlen + 1 characters
 	//	cout << students[i].name
 	//		 << string (maxlen + 1 - students[i].name.size(), ' ');
 
-	//	// compute and write the grade
-	//	try {
-	//		double final_grade = grade (students[i]);
+	//	//// compute and write the grade
+	//	//try {
+	//	//	double final_grade = grade (students[i]);
 	//		streamsize prec = cout.precision();
-	//		cout << setprecision(3) << final_grade << setprecision(prec);
-	//	} catch (domain_error e) {
-	//		cout << e.what();
-	//	}
+	//		cout << setprecision(3) << students[i].subject_grade << setprecision(prec);
+	//	//} catch (domain_error e) {
+	//	//	cout << e.what();
+	//	//}
 	//	cout << endl;
 	//}
 

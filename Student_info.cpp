@@ -1,5 +1,6 @@
 // source file for Student_infoted functions
 #include "Student_info.h"
+#include "grade.h"
 
 using std::istream;
 using std::vector;
@@ -12,9 +13,11 @@ bool compare(const Student_info& x, const Student_info& y)
 istream& read (istream& is, Student_info& s)
 {
 	//read and store student's name and midterm and final exam grades
-	is >> s.name >> s.midterm >> s.final;
-
-	read_hw (is, s.homework); // read and store all the student's homework grades
+	double midterm, final;
+	is >> s.name >> midterm >> final;
+	vector<double> homework;
+	read_hw (is, homework); // read and store all the student's homework grades
+	s.subject_grade = grade (midterm, final, homework);
 	return is;
 }
 
