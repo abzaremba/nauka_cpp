@@ -28,6 +28,7 @@ int main()
 	// ask for lots of words
 	cout << "Enter your words: " ;
 	
+
 	vector<string> string_vec = use_strings(cin);
 	cout << endl;
 
