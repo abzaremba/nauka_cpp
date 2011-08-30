@@ -36,6 +36,9 @@
     <ClCompile Include="string_care.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vec_avg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="median.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="string_care.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vec_avg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

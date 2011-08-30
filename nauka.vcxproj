@@ -67,12 +67,14 @@
     <ClCompile Include="median.cpp" />
     <ClCompile Include="string_care.cpp" />
     <ClCompile Include="Student_info.cpp" />
+    <ClCompile Include="vec_avg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="grade.h" />
     <ClInclude Include="median.h" />
     <ClInclude Include="string_care.h" />
     <ClInclude Include="Student_info.h" />
+    <ClInclude Include="vec_avg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

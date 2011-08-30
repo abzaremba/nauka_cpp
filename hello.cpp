@@ -8,6 +8,7 @@
 #include "grade.h"
 #include "Student_info.h"
 #include "string_care.h"
+#include "vec_avg.h"
 
 using std::cin;
 using std::cout;
@@ -25,14 +26,28 @@ using std::vector;
 
 int main()
 {
-	// ask for lots of words
-	cout << "Enter your words: " ;
-	
+	// asks and reads a vector
+	cout << "Enter your numbers: ";
+	vector<double> vec;
+	double current_elem;
+	while (cin >> current_elem)
+		vec.push_back(current_elem);
 
-	vector<string> string_vec = use_strings(cin);
-	cout << endl;
+	cout << endl << "Average of the vector you've entered is: " << vec_average (vec) << endl;
 
-	for (vector<string>::size_type i=0; i != string_vec.size(); ++i)
+
+
+
+
+
+	//// ask for lots of words
+	//cout << "Enter your words: " ;
+	//
+
+	//vector<string> string_vec = use_strings(cin);
+	//cout << endl;
+
+	//for (vector<string>::size_type i=0; i != string_vec.size(); ++i)
 
 	 
 
