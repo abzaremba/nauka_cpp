@@ -19,7 +19,7 @@ vector<string> split(const string& s)
 			++i;
 
 		// find end of next word
-		string_size j = 0;
+		string_size j = i;
 		// invariant: none of the character isn range [original j, current j) is a space
 		while (j != s.size() && !isspace(s[j]))
 			++j;
@@ -27,7 +27,7 @@ vector<string> split(const string& s)
 		//if we found some nonwhitespace characters
 		if (i != j) {
 			//copy from s starting at i and taking j-i chars
-			ret.push_back(s.substr(i, j=i));
+			ret.push_back(s.substr(i, j-i));
 			i=j;
 		}
 	}
