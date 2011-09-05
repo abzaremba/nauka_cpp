@@ -12,6 +12,27 @@ using std::vector;
 
 int main()
 {
+	string s;
+	// read and store in vector of strings string_vec
+	vector<string> string_vec;
+
+	while (getline(cin, s))
+		string_vec.push_back(s);
+
+	vector<string> framed_string_vec = frame(string_vec);
+
+	// print the concatenated vector of strings
+	vector<string> concatenated_string_vec = hcat(string_vec, framed_string_vec);
+
+		for (vector<string>::size_type i = 0; i != concatenated_string_vec.size(); ++i)
+	{
+		cout << concatenated_string_vec[i] << endl;
+	}
+
+
+	cout << endl;
+	
+	
 	//string s;
 	////read and split each line of input
 	//while (getline(cin, s)) {

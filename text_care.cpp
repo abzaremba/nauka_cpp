@@ -103,6 +103,9 @@ vector<string> hcat(const vector<string>& left, const vector<string>& right)
 		if (j != right.size())
 			s += right[j++];
 
+		// add s to the picture we're ctrreating
+		ret.push_back(s);
+
 	}
 	return ret;
 }
