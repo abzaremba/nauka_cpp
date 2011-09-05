@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "split.h"
+#include "text_care.h"
 
 
 using std::cin; using std::cout; using std::endl;
@@ -24,9 +24,9 @@ int main()
 
 	// alternative version of the thing above (i.e. splitting lines into words)
 
-	string s;
-	while (cin >> s)
-		cout << s << endl;
+	//string s;
+	//while (cin >> s)
+	//	cout << s << endl;
 
 
 	return 0;

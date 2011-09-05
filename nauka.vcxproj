@@ -66,7 +66,7 @@
     <ClCompile Include="grade.cpp" />
     <ClCompile Include="hello.cpp" />
     <ClCompile Include="median.cpp" />
-    <ClCompile Include="split.cpp" />
+    <ClCompile Include="text_care.cpp" />
     <ClCompile Include="string_care.cpp" />
     <ClCompile Include="Student_info.cpp" />
     <ClCompile Include="vec_avg.cpp" />
@@ -74,7 +74,7 @@
   <ItemGroup>
     <ClInclude Include="grade.h" />
     <ClInclude Include="median.h" />
-    <ClInclude Include="split.h" />
+    <ClInclude Include="text_care.h" />
     <ClInclude Include="string_care.h" />
     <ClInclude Include="Student_info.h" />
     <ClInclude Include="vec_avg.h" />

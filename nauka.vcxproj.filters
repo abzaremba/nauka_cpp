@@ -42,7 +42,7 @@
     <ClCompile Include="chapter4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="split.cpp">
+    <ClCompile Include="text_care.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,7 +62,7 @@
     <ClInclude Include="vec_avg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="split.h">
+    <ClInclude Include="text_care.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
