@@ -72,9 +72,9 @@ int not_main_ch4()
 
 		//// compute and write the grade
 		//try {
-		//	double final_grade = grade (students[i]);
+			double final_grade = grade (students[i]);
 			streamsize prec = cout.precision();
-			cout << setprecision(3) << students[i].subject_grade << setprecision(prec);
+			cout << setprecision(3) << final_grade << setprecision(prec);
 		//} catch (domain_error e) {
 		//	cout << e.what();
 		//}

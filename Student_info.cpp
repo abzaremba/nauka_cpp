@@ -2,6 +2,7 @@
 #include "Student_info.h"
 #include "grade.h"
 #include <list>
+#include <algorithm>
 
 using std::istream;
 using std::vector;
@@ -15,12 +16,8 @@ bool compare(const Student_info& x, const Student_info& y)
 istream& read (istream& is, Student_info& s)
 {
 	//read and store student's name and midterm and final exam grades
-	double midterm, final;
-	is >> s.name >> midterm >> final;
-	vector<double> homework;
-	read_hw (is, homework); // read and store all the student's homework grades
-	//s.subject_grade = grade (midterm, final, homework);
-	if (is) s.subject_grade = grade (midterm, final, homework);
+	is >> s.name >> s.midterm >> s.final;
+	read_hw (is, s.homework); // read and store all the student's homework grades
 	return is;
 }
 
@@ -42,11 +39,6 @@ istream& read_hw (istream& in, vector<double>& hw)
 	return in;
 }
 
-// predicate to determine whether a student failed
-bool fgrade(const Student_info& s)
-{
-	return s.subject_grade < 60;
-}
 
 // version 3 with vectors
 vector<Student_info> extract_fails(vector<Student_info>& students)
@@ -62,6 +54,11 @@ vector<Student_info> extract_fails(vector<Student_info>& students)
 			++iter;
 	}
 	return fail;
+}
+
+bool did_all_hw(const Student_info& s)
+{
+	return ((find(s.homework.begin(), s.homework.end(), 0)) == s.homework.end());
 }
 
 
