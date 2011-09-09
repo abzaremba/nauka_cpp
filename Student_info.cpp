@@ -3,10 +3,12 @@
 #include "grade.h"
 #include <list>
 #include <algorithm>
+#include <iterator>
 
 using std::istream;
 using std::vector;
 using std::list;
+
 
 bool compare(const Student_info& x, const Student_info& y)
 {
@@ -40,19 +42,18 @@ istream& read_hw (istream& in, vector<double>& hw)
 }
 
 
-// version 3 with vectors
+bool pgrade(const Student_info& s)
+{
+	return !fgrade(s);
+}
+
+// version 5 with vectors and faster way of dealing with them
 vector<Student_info> extract_fails(vector<Student_info>& students)
 {
 	vector<Student_info> fail;
-	vector<Student_info>::iterator iter=students.begin();
+	remove_copy_if(students.begin(), students.end(), back_inserter(fail), pgrade);
+	students.erase(remove_if(students.begin(), students.end(), fgrade), students.end());
 
-	while(iter != students.end()){
-		if (fgrade(*iter)){
-			fail.push_back(*iter);
-			iter = students.erase(iter);
-		} else
-			++iter;
-	}
 	return fail;
 }
 
