@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <map>
 
 std::istream& read_strings(std::istream& an_istream, std::vector<std::string>& str_vec);
 int count_strings (const std::vector<std::string>& str_vec);

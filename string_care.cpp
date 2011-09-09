@@ -15,6 +15,7 @@ using std::cout;
 using std::endl;
 
 
+
 // reads a vector of strings
 istream& read_strings(istream& an_istream, vector<string>& str_vec) 
 {
@@ -57,3 +58,5 @@ vector<string> use_strings(istream& an_istream)
 
 	return str_vec;
 };
+
+

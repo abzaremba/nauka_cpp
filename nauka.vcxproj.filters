@@ -45,6 +45,9 @@
     <ClCompile Include="text_care.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="chapter6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="median.h">
