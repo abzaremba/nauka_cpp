@@ -69,6 +69,7 @@
     <ClCompile Include="grammar.cpp" />
     <ClCompile Include="hello.cpp" />
     <ClCompile Include="median.cpp" />
+    <ClCompile Include="templates.cpp" />
     <ClCompile Include="text_care.cpp" />
     <ClCompile Include="string_care.cpp" />
     <ClCompile Include="Student_info.cpp" />
@@ -78,6 +79,7 @@
     <ClInclude Include="grade.h" />
     <ClInclude Include="grammar.h" />
     <ClInclude Include="median.h" />
+    <ClInclude Include="templates.h" />
     <ClInclude Include="text_care.h" />
     <ClInclude Include="string_care.h" />
     <ClInclude Include="Student_info.h" />

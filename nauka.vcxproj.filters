@@ -54,6 +54,9 @@
     <ClCompile Include="chapter7.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="templates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="median.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="grammar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="templates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

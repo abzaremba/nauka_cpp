@@ -1,35 +1,44 @@
-#include <vector>
-#include <string>
-#include <iostream>
-#include "grammar.h"
+// testing generic functions
 
-using std::cin;
+#include <vector>
+#include <iostream>
+#include "templates.h"
+
+
 using std::vector;
+using std::cin;
 using std::cout;
-using std::string;
 using std::endl;
 
-
+template <class For, class X> void replace(For beg, For end, const X& x, const X& y)
+{
+	while (beg != end) {
+		if (*beg == x)
+			*beg = y;
+		++beg;
+	}
+}
 
 int main()
 {
-	// generate sentence
-	vector<string> sentence = gen_sentence(read_grammar(cin));
+	vector<double> vec;
+	double i;
 
-	// write the first word if any
-	vector<string>::const_iterator it = sentence.begin();
-	if (!sentence.empty()) {
-		cout << *it;
-		++it;
+	while(cin >> i)
+	{
+		vec.push_back(i);
 	}
 
-	// write the rest of the words, each preceded by a space
-	while (it != sentence.end()) {
-		cout << " " << *it;
-		++it;
-	}
+	cout << endl << median(vec) <<endl;
 
-	cout << endl;
-	return 0;
+	double first, last;
+	first = *(vec.begin());
+	last = *(vec.end()-1);
+	replace(vec.begin(), vec.end(), first, last);
+
+	cout << endl << median(vec) <<endl;
+
+	double temp;
+	cin >> temp;
 
 }
