@@ -11,7 +11,7 @@ using std::endl;
 
 
 
-int main()
+int main_OLD7()
 {
 	// generate sentence
 	vector<string> sentence = gen_sentence(read_grammar(cin));
