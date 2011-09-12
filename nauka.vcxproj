@@ -60,11 +60,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="chapter2.cpp" />
-    <ClCompile Include="chapter3.cpp" />
-    <ClCompile Include="chapter4.cpp" />
-    <ClCompile Include="chapter6.cpp" />
-    <ClCompile Include="chapter7.cpp" />
     <ClCompile Include="grade.cpp" />
     <ClCompile Include="grammar.cpp" />
     <ClCompile Include="hello.cpp" />

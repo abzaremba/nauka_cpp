@@ -18,12 +18,6 @@
     <ClCompile Include="hello.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="chapter2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="chapter3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Student_info.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,19 +33,10 @@
     <ClCompile Include="vec_avg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="chapter4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="text_care.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="chapter6.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="grammar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="chapter7.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="templates.cpp">
