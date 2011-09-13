@@ -1,50 +1,37 @@
 #include <vector>
 #include <iostream>
-#include <algorithm>
-#include <ios>
-#include <iomanip>
-#include <stdexcept>
-#include "Student_info.h"
 
 using std::vector;
-using std::string;
-using std::cin;
 using std::cout;
+using std::cin;
 using std::endl;
-using std::max;
-using std::streamsize;
-using std::setprecision;
-using std::domain_error;
+
+template <class In, class Pred> In find_if(In begin, In end, Pred f)
+{
+	while (begin != end && !f(*begin))
+		++begin;
+	return begin;
+}
+
+bool is_negative(int n)
+{
+	return n < 0;
+}
 
 
 int main()
 {
+	// read a vector of ints
+	cout << "gimme a vector ";
+	vector<int> v;
+	int number;
+	while (cin >> number)
+		v.push_back(number);
 
-	vector<Student_info> students;
-	Student_info record;
-	string::size_type maxlen = 0;
-	
-	// read and store the data
-	while (record.read(cin)) {
-		maxlen = max(maxlen, record.name().size());
-		students.push_back(record);
-	}
-	
-	//alphabetize the student records
-	sort(students.begin(), students.end(), compare);
+	vector<int>::iterator i = find_if(v.begin(), v.end(), is_negative);
 
-	// write the names and grades
-	for (vector<Student_info>::size_type i = 0; i != students.size(); ++i) {
-		cout << students[i].name()
-			 << string (maxlen + 1 - students[i].name().size(), ' ');
-		try {
-			double final_grade = students[i].grade();
-			streamsize prec = cout.precision();
-			cout << setprecision(3) <<final_grade
-				 << setprecision(prec) << endl;
-		} catch (domain_error e) {
-			cout << e.what() << endl;
-		}
-	}
+	cout << "your element " << *i;
+
 	return 0;
+
 }
