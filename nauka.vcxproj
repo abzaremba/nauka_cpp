@@ -60,6 +60,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="chapter9.cpp" />
     <ClCompile Include="grade.cpp" />
     <ClCompile Include="grammar.cpp" />
     <ClCompile Include="hello.cpp" />
