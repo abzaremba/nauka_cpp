@@ -68,6 +68,7 @@
     <ClCompile Include="text_care.cpp" />
     <ClCompile Include="string_care.cpp" />
     <ClCompile Include="Student_info.cpp" />
+    <ClCompile Include="Vec.cpp" />
     <ClCompile Include="vec_avg.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +79,7 @@
     <ClInclude Include="text_care.h" />
     <ClInclude Include="string_care.h" />
     <ClInclude Include="Student_info.h" />
+    <ClInclude Include="Vec.h" />
     <ClInclude Include="vec_avg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
