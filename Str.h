@@ -10,7 +10,13 @@ class Str {
 	friend std::istream& operator>> (std::istream&, Str&);
 public:
 	Str& operator+=(const Str& s) {
-		std::copy(s.data.begin(), s.data.end(), std::back_inserter(data));
+		if (&s != this) 
+			std::copy(s.data.begin(), s.data.end(), std::back_inserter(data));
+		else {
+			Str r = s;
+			std::copy(r.data.begin(), r.data.end(), std::back_inserter(data));
+		}
+		
 		return *this;
 	}
 

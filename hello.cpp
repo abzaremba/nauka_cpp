@@ -29,7 +29,7 @@ int main()
 		cout << "\n" << example_str[i];
 
 	Str example_str3(3,'b');
-	example_str3 = example_str3 + example_str3;
+	example_str3 += example_str3;
 
 	cout << endl;
 	for(Str::size_type i = 0; i != example_str3.size(); ++i)
