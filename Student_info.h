@@ -1,35 +1,102 @@
 #ifndef GUARD_Student_info
 #define GUARD_Student_info
 
-// Student_info.h - header file
-#include <iostream>
-#include <string>
-#include <vector>
-//#include <list>
 
+//#include <iostream>
+//#include <string>
+#include <vector>
+#include <string>
+////#include <list>
+//
+//
+
+
+class Core {
+	friend class Student_info;
+public:
+	Core(): midterm(0), final(0) { }
+	Core(std::istream& is) { read(is); }
+
+	std::string name() const { return n; };
+
+	virtual std::istream& read(std::istream&);
+	virtual double grade() const;
+protected:
+	virtual Core* clone() const { return new Core(*this); }
+	std::istream& read_common(std::istream&);
+	double midterm, final;
+	std::vector<double> homework;
+private:
+	std::string n;
+};
+
+
+class Grad: public Core {
+public:
+	Grad(): thesis(0) { }
+	Grad(std::istream& is) { read (is); }
+
+	double grade() const;
+	std::istream& read(std::istream&);
+protected:
+	Grad* clone() const { return new Grad(*this); }
+private:
+	double thesis;
+};
 
 class Student_info {
 public:
-	Student_info();
-	Student_info(std::istream&);
-	std::string name() const { return n; }
-	bool valid() const { return !homework.empty(); }
+	//constructors and copy control
+	Student_info(): spointer(0) { }
+	Student_info(std::istream& is): spointer(0) { read(is); }
+	Student_info(const Student_info&);
+	Student_info& operator= (const Student_info&);
+	~Student_info() { delete spointer; }
+
+	//operations
 	std::istream& read(std::istream&);
-	double grade() const;
+
+	std::string name() const {
+		if (spointer) return spointer->name();
+		else throw std::runtime_error("uninitialised Student");
+	}
+	double grade() const {
+		if (spointer) return spointer->grade();
+		else throw std::runtime_error("uninitialised student");
+	}
+	static bool compare (const Student_info& s1, const Student_info& s2) {
+		return s1.name() < s2.name();
+	}
 
 private:
-	std::string n;
-	double midterm, final;
-	std::vector<double> homework;
+	Core* spointer;
 };
 
-bool compare(const Student_info&, const Student_info&);
-//std::istream& read(std::istream&, Student_info&);
+bool compare (const Core&, const Core&);
+
+
+//class Student_info {
+//public:
+//	Student_info();
+//	Student_info(std::istream&);
+//	std::string name() const { return n; }
+//	bool valid() const { return !homework.empty(); }
+//	std::istream& read(std::istream&);
+//	double grade() const;
+//
+//private:
+//	std::string n;
+//	double midterm, final;
+//	std::vector<double> homework;
+//};
+//
+//bool compare(const Student_info&, const Student_info&);
+////std::istream& read(std::istream&, Student_info&);
 std::istream& read_hw(std::istream&, std::vector<double>&);
-bool fgrade(const Student_info& s);
-std::vector<Student_info> extract_fails(std::vector<Student_info>& students);
-//std::list<Student_info> extract_fails(std::list<Student_info>& students);
-//bool did_all_hw(const Student_info& s);
+//bool fgrade(const Student_info& s);
+//std::vector<Student_info> extract_fails(std::vector<Student_info>& students);
+////std::list<Student_info> extract_fails(std::list<Student_info>& students);
+////bool did_all_hw(const Student_info& s);
 
 
 #endif

@@ -1,39 +1,52 @@
-#include "Vec.h"
-#include <iostream>
-#include "Str.h"
+#include <vector>
+#include "Student_info.h"
 #include <string>
+#include <algorithm>
+#include <iostream>
+#include <ios>
+#include <iomanip>
+#include <stdexcept>
+
 
 using std::cout;
 using std::cin;
 using std::endl;
-
+using std::vector;
 using std::string;
-
+using std::streamsize;
+using std::setprecision;
+using std::max;
+using std::domain_error;
 
 
 int main()
 {
 
-	Str example_str(3,'a');
+	vector <Student_info> students;
+	Student_info record;
+	string::size_type maxlen = 0;
 
-	Str example_str2 = example_str + example_str;
+	// read and store the data
+	while (record.read(cin)) {
+		maxlen = max(maxlen, record.name().size());
+		students.push_back(record);
+	}
 
-	for(Str::size_type i = 0; i != example_str2.size(); ++i)
-		cout << "\n" << example_str2[i];
+	// alphabetize the student records
+	sort(students.begin(), students.end(), Student_info::compare);
 
-	cout << endl;
-
-	example_str += example_str2;
-
-	for(Str::size_type i = 0; i != example_str.size(); ++i)
-		cout << "\n" << example_str[i];
-
-	Str example_str3(3,'b');
-	example_str3 += example_str3;
-
-	cout << endl;
-	for(Str::size_type i = 0; i != example_str3.size(); ++i)
-		cout << "\n" << example_str3[i];
+	// write the names and grades
+	for (vector<Student_info>::size_type i = 0; i != students.size(); ++i ) {
+		cout << students[i].name() <<
+			    string(maxlen + 1 - students[i].name().size(), ' ');
+		try {
+			double final_grade = students[i].grade();
+			streamsize prec = cout.precision();
+			cout << setprecision(3) << final_grade << setprecision(prec) << endl;
+		} catch (domain_error e){
+			cout << e.what() << endl;
+		}
+	}
 
 	return 0;
 
