@@ -75,6 +75,7 @@
     <ClInclude Include="grade.h" />
     <ClInclude Include="grammar.h" />
     <ClInclude Include="median.h" />
+    <ClInclude Include="Ptr.h" />
     <ClInclude Include="Str.h" />
     <ClInclude Include="templates.h" />
     <ClInclude Include="text_care.h" />

@@ -77,5 +77,8 @@
     <ClInclude Include="Str.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Ptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
