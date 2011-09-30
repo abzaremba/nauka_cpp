@@ -36,7 +36,7 @@ private:
 	T* p;
 	std::size_t* refptr;
 
-}
+};
 
 template <class T> Ptr<T>& Ptr<T>::operator=(const Ptr& rhs)
 {
