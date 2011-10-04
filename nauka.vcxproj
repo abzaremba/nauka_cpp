@@ -64,6 +64,7 @@
     <ClCompile Include="grammar.cpp" />
     <ClCompile Include="hello.cpp" />
     <ClCompile Include="median.cpp" />
+    <ClCompile Include="Picture.cpp" />
     <ClCompile Include="Str.cpp" />
     <ClCompile Include="templates.cpp" />
     <ClCompile Include="text_care.cpp" />
@@ -75,6 +76,7 @@
     <ClInclude Include="grade.h" />
     <ClInclude Include="grammar.h" />
     <ClInclude Include="median.h" />
+    <ClInclude Include="Picture.h" />
     <ClInclude Include="Ptr.h" />
     <ClInclude Include="Str.h" />
     <ClInclude Include="templates.h" />
