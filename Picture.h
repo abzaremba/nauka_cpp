@@ -5,6 +5,7 @@
 #include <string>
 #include "Ptr.h"
 #include <iostream>
+#include <algorithm>
 
 // forward declaration of Picture, so that we can include it inside operator << before actually defining it
 class Picture;
@@ -46,8 +47,8 @@ class Picture
 	friend Picture vcat(const Picture&, const Picture&);
 public:
 	Picture(const std::vector<std::string>& = std::vector<std::string>());
-	Picture(Pic_base* ptr): p(ptr) { }
 private:
+	Picture(Pic_base* ptr): p(ptr) { }
 	Ptr<Pic_base> p;
 };
 

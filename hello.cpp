@@ -6,16 +6,22 @@
 
 using std::vector;
 using std::string;
+using std::cout;
+using std::endl;
+
 
 int main()
 {
 	vector<string> v;
 	v.push_back("abc");
 	v.push_back("dupa");
-	Picture origin_pic();
-	//Picture origin_pic2(v);
+	//Picture origin_pic();
+	Picture origin_pic2(v);
 
-
+	cout << origin_pic2 << endl;
+	cout << frame(origin_pic2) << endl;
+	cout << vcat(frame(origin_pic2), origin_pic2) << endl;
+	cout << hcat(frame(origin_pic2), origin_pic2) << endl;
 
 	return 0;
 }
