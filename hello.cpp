@@ -1,11 +1,22 @@
 #include "Ptr.h"
+#include "Picture.h"
 #include <vector>
+#include <iostream>
+#include <string>
 
-using std:: vector;
+using std::vector;
+using std::string;
 
 int main()
 {
-	Ptr<vector<char> > a();
+	vector<string> v;
+	v.push_back("abc");
+	v.push_back("dupa");
+	Picture origin_pic();
+	//Picture origin_pic2(v);
+
+
+
 	return 0;
 }
 

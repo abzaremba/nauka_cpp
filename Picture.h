@@ -27,7 +27,7 @@ class Pic_base
 	virtual void display(std::ostream&, ht_sz, bool)const = 0;
 
 public:
-	virtual ~Pic_base();
+	virtual ~Pic_base() { };
 
 protected:
 	static void pad(std::ostream& os, wd_sz beg, wd_sz end) {
